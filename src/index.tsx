@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import App from './app';
+import { Home } from './home/home';
+import './global.css';
 
-ReactDOM.render(<div>hellooo</div>, document.getElementById('root'));
+ReactDOM.render(<Home />, document.getElementById('root'));
