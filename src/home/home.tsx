@@ -6,7 +6,9 @@ export const Home = () => {
     return (
         <div className={styles.body}>
             <BigHero>
-                hiii
+                <span className={styles.cursiveHeading}>
+                    Hello
+                </span>
             </BigHero>
         </div>
     );
