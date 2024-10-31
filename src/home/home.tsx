@@ -1,12 +1,13 @@
 import * as React from 'react';
+import { BigHero } from '../big_hero/big_hero';
 import styles from './home.css';
 
 export const Home = () => {
     return (
         <div className={styles.body}>
-            <div className={styles.head}>
-
-            </div>
+            <BigHero>
+                hiii
+            </BigHero>
         </div>
     );
 };
