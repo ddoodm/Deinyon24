@@ -3,6 +3,7 @@
 :root {
     --grid-size: 60px;
     --grid-size-small: calc(var(--grid-size) * 0.2);
+    --heading-color: #dec3ad;
   }
   
 .body {
@@ -29,4 +30,5 @@
 .cursiveHeading {
   font-family: 'Lobster', cursive;
   font-size: 32pt;
+  color: var(--heading-color);
 }
