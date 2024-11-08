@@ -7,6 +7,8 @@
   }
   
 .body {
+    min-height: 100vh;
+
     background-color: #252525;
     background-position: 0 100vh;
     background-size:
@@ -30,5 +32,7 @@
 .cursiveHeading {
   font-family: 'Lobster', cursive;
   font-size: 32pt;
+  height: 42pt;
   color: var(--heading-color);
+  margin-top: -0.2em;
 }
