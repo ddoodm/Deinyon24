@@ -3,7 +3,8 @@
 :root {
     --grid-size: 60px;
     --grid-size-small: calc(var(--grid-size) * 0.2);
-    --heading-color: #dec3ad;
+    /* --heading-color: #dec3ad; */
+    --heading-color: rgb(208 210 230);
   }
   
 .body {
@@ -35,4 +36,6 @@
   height: 42pt;
   color: var(--heading-color);
   margin-top: -0.2em;
+  text-align: center;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.85);
 }

@@ -4,7 +4,7 @@ import deinyonSmall from './deinyon-small.jpg';
 
 export const ProfilePic = () => {
     return (
-        <div>
+        <div className={styles.container}>
             <img
                 className={styles.profilePic}
                 src={deinyonSmall}

@@ -9,7 +9,7 @@ export const Home = () => {
     return (
         <div className={styles.body}>
             <BigHero>
-                <Rows spacing='32px' align='stretch'>
+                <Rows spacing='48px' align='stretch'>
                     <ProfilePic />
                     <span className={styles.cursiveHeading}>
                         Deinyon Davies
