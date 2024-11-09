@@ -11,16 +11,29 @@ import GitHubIcon from '../icons/github-mark.svg';
 import YouTubeIcon from '../icons/youtube.svg';
 import InstagramIcon from '../icons/instagram.svg';
 
-export const Home = () => {
-    const SiteLink: React.FC<React.PropsWithChildren<{ Icon: React.ComponentType<{ style?: React.CSSProperties }>, href: string }>> = ({ Icon, href, children }) => (
-        <a href={href} target='_blank'>
-            <Columns gap='0.5em' alignItems='center'>
-                <Icon style={{ height: '1em', width: '1em' }} />
-                <span>{children}</span>
-            </Columns>
-        </a>
-    );
+const SiteLink: React.FC<React.PropsWithChildren<{ Icon: React.ComponentType<{ style?: React.CSSProperties }>, href: string }>> = ({ Icon, href, children }) => (
+    <a href={href} target='_blank'>
+        <Columns gap='0.5em' alignItems='center'>
+            <Icon style={{ height: '1em', width: '1em' }} />
+            <span>{children}</span>
+        </Columns>
+    </a>
+);
 
+const Footer = () => {
+    return (
+        <div style={{
+            padding: '2em',
+            color: 'white',
+            textAlign: 'center',
+        }}>
+            &copy; Deinyon Davies 2024<br />
+            Hosted on GitHub Pages
+        </div>
+    );
+};
+
+export const Home = () => {
     return (
         <div className={styles.body}>
             <BigHero>
@@ -50,6 +63,7 @@ export const Home = () => {
                     </Sheet>
                 </Rows>
             </BigHero>
+            <Footer />
         </div>
     );
 };

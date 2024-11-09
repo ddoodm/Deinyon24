@@ -5,7 +5,7 @@
 .sheet {
     padding: 3em;
     background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: saturate(180%) contrast(80%) blur(2px);
+    backdrop-filter: saturate(200%) blur(2px);
     border-radius: 14px;
     box-shadow:
         -12px 8px 16px rgba(0, 0, 0, 0.3),
