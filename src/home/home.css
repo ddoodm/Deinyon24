@@ -37,3 +37,10 @@
   text-align: center;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.85);
 }
+
+.icon {
+  color: var(--body-text-color);
+  height: 1em;
+  width: auto;
+  vertical-align: middle;
+}

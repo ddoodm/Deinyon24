@@ -18,6 +18,10 @@ module.exports = {
         type: 'asset/resource',
       },
       {
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+      },
+      {
         test: /\.css$/,
         use: [
           'style-loader',

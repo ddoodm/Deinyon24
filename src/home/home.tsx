@@ -7,6 +7,8 @@ import styles from './home.css';
 import { Columns } from '../layout/columns/columns';
 import { Column } from '../layout/columns/column';
 import { Divider } from '../layout/columns/divider';
+import { Icon } from '../icons/icon';
+import GitHubIcon from '../icons/github-mark.svg';
 
 export const Home = () => {
     return (
@@ -26,9 +28,12 @@ export const Home = () => {
                                 background: 'var(--body-text-color)',
                                 opacity: 0.333,
                             }}/>
-                            <Column flex={0}>
+                            <Column flex={1}>
                                 <Rows>
-                                    <span>GitHub</span>
+                                    <Columns gap='0.5em'>
+                                        <GitHubIcon style={{ height: '1em', width: 'auto' }} />
+                                        <span>GitHub</span>
+                                    </Columns>
                                     <span>YouTube</span>
                                     <span>Instagram</span>
                                 </Rows>
