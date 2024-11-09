@@ -7,8 +7,9 @@ import styles from './home.css';
 import { Columns } from '../layout/columns/columns';
 import { Column } from '../layout/columns/column';
 import { Divider } from '../layout/columns/divider';
-import { Icon } from '../icons/icon';
 import GitHubIcon from '../icons/github-mark.svg';
+import YouTubeIcon from '../icons/youtube.svg';
+import InstagramIcon from '../icons/instagram.svg';
 
 export const Home = () => {
     return (
@@ -20,7 +21,7 @@ export const Home = () => {
                         Deinyon Davies
                     </span>
                     <Sheet>
-                        <Columns>
+                        <Columns gap='48px'>
                             <Column flex={1}>
                                 It's Deinyon's website! Pronounced like <i>Cayenne</i> but starting with "dein." I'm also known as <i>ddoodm</i> across the intertubes.
                             </Column>
@@ -28,14 +29,20 @@ export const Home = () => {
                                 background: 'var(--body-text-color)',
                                 opacity: 0.333,
                             }}/>
-                            <Column flex={1}>
+                            <Column flex={0.25}>
                                 <Rows>
-                                    <Columns gap='0.5em'>
-                                        <GitHubIcon style={{ height: '1em', width: 'auto' }} />
+                                    <Columns gap='0.5em' alignItems='center'>
+                                        <GitHubIcon style={{ height: '1em', width: '1em' }} />
                                         <span>GitHub</span>
                                     </Columns>
-                                    <span>YouTube</span>
-                                    <span>Instagram</span>
+                                    <Columns gap='0.5em' alignItems='center'>
+                                        <YouTubeIcon style={{ height: '1em', width: '1em' }} />
+                                        <span>YouTube</span>
+                                    </Columns>
+                                    <Columns gap='0.5em' alignItems='center'>
+                                        <InstagramIcon style={{ height: '1em', width: '1em' }} />
+                                        <span>Instagram</span>
+                                    </Columns>
                                 </Rows>
                             </Column>
                         </Columns>
