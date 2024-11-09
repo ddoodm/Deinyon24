@@ -14,6 +14,10 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
+        test: /\.(ttf|otf|woff|woff2|eot)$/,
+        type: 'asset/resource',
+      },
+      {
         test: /\.css$/,
         use: [
           'style-loader',
