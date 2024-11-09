@@ -15,7 +15,7 @@ export const Home = () => {
                         Deinyon Davies
                     </span>
                     <Sheet>
-                        It's Deinyon's website! Pronounced like <i>Cayenne</i> &#x1f336;&#xFE0F; but starting with "dein". Also known as <i>ddoodm</i> across the net.
+                        It's Deinyon's website! Pronounced like <i>Cayenne</i> but starting with "dein." I'm also known as <i>ddoodm</i> across the intertubes.
                     </Sheet>
                 </Rows>
             </BigHero>
