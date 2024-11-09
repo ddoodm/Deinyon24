@@ -12,17 +12,26 @@ import YouTubeIcon from '../icons/youtube.svg';
 import InstagramIcon from '../icons/instagram.svg';
 
 export const Home = () => {
+    const SiteLink: React.FC<React.PropsWithChildren<{ Icon: React.ComponentType<{ style?: React.CSSProperties }>, href: string }>> = ({ Icon, href, children }) => (
+        <a href={href} target='_blank'>
+            <Columns gap='0.5em' alignItems='center'>
+                <Icon style={{ height: '1em', width: '1em' }} />
+                <span>{children}</span>
+            </Columns>
+        </a>
+    );
+
     return (
         <div className={styles.body}>
             <BigHero>
-                <Rows spacing='48px' align='stretch'>
+                <Rows spacing='50px' align='stretch'>
                     <ProfilePic />
                     <span className={styles.cursiveHeading}>
                         Deinyon Davies
                     </span>
                     <Sheet>
                         <Columns gap='48px'>
-                            <Column flex={1}>
+                            <Column flex={1} alignSelf='center'>
                                 It's Deinyon's website! Pronounced like <i>Cayenne</i> but starting with "dein." I'm also known as <i>ddoodm</i> across the intertubes.
                             </Column>
                             <Divider style={{
@@ -31,18 +40,9 @@ export const Home = () => {
                             }}/>
                             <Column flex={0.25}>
                                 <Rows>
-                                    <Columns gap='0.5em' alignItems='center'>
-                                        <GitHubIcon style={{ height: '1em', width: '1em' }} />
-                                        <span>GitHub</span>
-                                    </Columns>
-                                    <Columns gap='0.5em' alignItems='center'>
-                                        <YouTubeIcon style={{ height: '1em', width: '1em' }} />
-                                        <span>YouTube</span>
-                                    </Columns>
-                                    <Columns gap='0.5em' alignItems='center'>
-                                        <InstagramIcon style={{ height: '1em', width: '1em' }} />
-                                        <span>Instagram</span>
-                                    </Columns>
+                                    <SiteLink Icon={GitHubIcon} href='https://github.com/ddoodm/'>GitHub</SiteLink>
+                                    <SiteLink Icon={YouTubeIcon} href='https://www.youtube.com/ddoodm'>YouTube</SiteLink>
+                                    <SiteLink Icon={InstagramIcon} href='https://www.instagram.com/ddoodm/'>Instagram</SiteLink>
                                 </Rows>
                             </Column>
                         </Columns>

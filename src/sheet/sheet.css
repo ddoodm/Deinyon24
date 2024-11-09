@@ -11,7 +11,7 @@
         -12px 8px 16px rgba(0, 0, 0, 0.3),
         inset 0 1px 0 rgba(255, 255, 255, 0.5), /* Inner top light */
         inset 0.5px -1px 0 rgba(255, 255, 255, 0.2); /* Inner bottom light */;
-    max-width: 1024px;
+    max-width: 700px;
     margin: 0 auto;
 
     color: var(--body-text-color);
