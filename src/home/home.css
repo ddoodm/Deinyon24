@@ -4,13 +4,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
-:root {
-    --grid-size: 60px;
-    --grid-size-small: calc(var(--grid-size) * 0.2);
-    /* --heading-color: #dec3ad; */
-    --heading-color: rgb(208 210 230);
-  }
   
 .body {
     min-height: 100vh;

@@ -4,3 +4,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --grid-size: 60px;
+    --grid-size-small: calc(var(--grid-size) * 0.2);
+
+    --heading-color: rgb(208 210 230);
+    --body-text-color: #e8ebff;
+  }
