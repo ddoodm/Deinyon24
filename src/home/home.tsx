@@ -30,11 +30,12 @@ export const Home = () => {
                         Deinyon Davies
                     </span>
                     <Sheet>
-                        <Columns gap='48px'>
-                            <Column flex={1} alignSelf='center'>
+                        <Columns gap='12px' className={styles.bodyColumns} alignItems='center'>
+                            <Column flex={1}>
                                 It's Deinyon's website! Pronounced like <i>Cayenne</i> but starting with "dein." I'm also known as <i>ddoodm</i> across the intertubes.
                             </Column>
                             <Divider style={{
+                                alignSelf: 'stretch',
                                 background: 'var(--body-text-color)',
                                 opacity: 0.333,
                             }}/>
