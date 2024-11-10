@@ -40,13 +40,11 @@ export const Home = () => {
             <BigHero>
                 <Rows spacing='50px' align='stretch'>
                     <ProfilePic />
-                    <div className={styles.cursiveHeadingWrapper}>
-                        <div className={styles.backgroundCanvas}>
-                            <Bubbles />
-                        </div>
-                        <div className={styles.cursiveHeading}>
-                            Deinyon Davies
-                        </div>
+                    <div className={styles.backgroundCanvas}>
+                        <Bubbles />
+                    </div>
+                    <div className={styles.cursiveHeading}>
+                        Deinyon Davies
                     </div>
                     <Sheet>
                         <Columns gap='12px' className={styles.bodyColumns} alignItems='center'>

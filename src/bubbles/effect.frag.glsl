@@ -8,7 +8,7 @@ uniform vec2 u_resolution;
 uniform float u_time;
 
 const float INFINITY = 300.0;
-const float EPSILON = 0.001;
+const float EPSILON = 0.0001;
 const float PI = 3.14159;
 
 float sdBox(vec3 p, vec3 b)
@@ -19,17 +19,14 @@ float sdBox(vec3 p, vec3 b)
 vec2 field(vec3 p) {
   float d = 0.0;
     
-    // box
-    {
         vec3 pp = p + vec3(
             0.0,
             cos(p.x*0.04 + u_time*4.0)*4.0,
             -1.0 + sin(p.x*0.1 - u_time*4.0)*0.5);
         float r = 3.;
-        vec3 br = vec3(200.0, r, r);
+        vec3 br = vec3(INFINITY, r, r);
         d = sdBox(pp, br);
         d -= 0.4; // rounding
-    }
     
     float mat = 1.;
     
@@ -95,7 +92,7 @@ vec3 shadeSnake(vec4 pm, vec3 ro, vec3 n)
     float l2 = max(0.0, dot(n, lp2));
     float l3 = max(0.0, dot(n, lp3));
     
-    float spec3 = pow(max(0.0, dot(r, lp3)), 128.0);
+    float spec3 = pow(max(0.0, dot(r, lp3)), 60.0);
 
     return  amb * alb +
         	alb * l1alb * l1 +
@@ -122,7 +119,7 @@ vec4 shade(vec4 hit, vec3 ro, vec3 rd)
 
 void main() {
   vec2 uv = v_uv;
-  uv.x *= u_resolution.x / u_resolution.y;
+  uv.x *= log2(u_resolution.x / u_resolution.y) * 3.0;
 
   vec3 ro = vec3(0.0, 0.0, -10.0);
   vec3 rd = normalize(vec3(uv.x, uv.y, 0.8));

@@ -14,3 +14,7 @@
     --heading-color: rgb(208 210 230);
     --body-text-color: #e8ebff;
   }
+
+body {
+    background-color: #252525;
+}
