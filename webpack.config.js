@@ -6,7 +6,6 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'output'),
-    clean: true,
   },
   module: {
     rules: [
@@ -40,6 +39,10 @@ module.exports = {
         test: /\.(png|jpe?g|webp|gif)$/i,
         type: 'asset/resource',
       },
+      {
+        test: /\.glsl$/,
+        use: 'raw-loader',
+      }
     ],
   },
   resolve: {

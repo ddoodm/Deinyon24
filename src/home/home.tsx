@@ -10,6 +10,7 @@ import { Divider } from '../layout/columns/divider';
 import GitHubIcon from '../icons/github-mark.svg';
 import YouTubeIcon from '../icons/youtube.svg';
 import InstagramIcon from '../icons/instagram.svg';
+import { Bubbles } from '../bubbles/bubbles';
 
 const SiteLink: React.FC<React.PropsWithChildren<{ Icon: React.ComponentType<{ style?: React.CSSProperties }>, href: string }>> = ({ Icon, href, children }) => (
     <a href={href} target='_blank'>
@@ -39,9 +40,14 @@ export const Home = () => {
             <BigHero>
                 <Rows spacing='50px' align='stretch'>
                     <ProfilePic />
-                    <span className={styles.cursiveHeading}>
-                        Deinyon Davies
-                    </span>
+                    <div className={styles.cursiveHeadingWrapper}>
+                        <div className={styles.backgroundCanvas}>
+                            <Bubbles />
+                        </div>
+                        <div className={styles.cursiveHeading}>
+                            Deinyon Davies
+                        </div>
+                    </div>
                     <Sheet>
                         <Columns gap='12px' className={styles.bodyColumns} alignItems='center'>
                             <Column flex={1}>

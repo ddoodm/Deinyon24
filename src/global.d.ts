@@ -13,3 +13,8 @@ declare module '*.svg' {
   const ReactComponent: React.FunctionComponent<React.SVGProps<SVGSVGElement> & { title?: string }>;
   export default ReactComponent;
 }
+
+declare module '*.glsl' {
+  const value: string;
+  export default value;
+}
