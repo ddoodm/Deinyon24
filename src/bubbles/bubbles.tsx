@@ -35,10 +35,13 @@ export const Bubbles = () => {
     };
 
     const render = (canvas: HTMLCanvasElement, gl: WebGL2RenderingContext) => {
-        const { width, height } = canvas;
-
         const currentTime = performance.now();
         const elapsedTime = (currentTime - startTime) / 1000;
+
+        if (elapsedTime >= Math.PI) {
+            startTime = performance.now();
+        }
+
         gl.uniform1f(uTimeLocation, elapsedTime);
 
         gl.clearColor(0,0,0,0);
