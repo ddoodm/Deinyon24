@@ -2,6 +2,8 @@ import React from 'react';
 import vertexShaderSource from './quad.vert.glsl';
 import fragmentShaderSource from './effect.frag.glsl';
 
+const SUPERSAMPLE_FACTOR = 2;
+
 export const Bubbles = () => {
     const canvasRef = React.useRef<HTMLCanvasElement>(null);
 
@@ -53,8 +55,8 @@ export const Bubbles = () => {
     const ro = new ResizeObserver(entries => {
         entries.forEach(e => {
             const canvas = e.target as HTMLCanvasElement;
-            canvas.width = e.contentRect.width;
-            canvas.height = e.contentRect.height;
+            canvas.width = e.contentRect.width * SUPERSAMPLE_FACTOR;
+            canvas.height = e.contentRect.height * SUPERSAMPLE_FACTOR;
             
             const gl = canvas.getContext('webgl2');
             if (!gl) {
