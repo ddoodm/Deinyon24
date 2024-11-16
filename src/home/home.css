@@ -58,6 +58,13 @@
   vertical-align: middle;
 }
 
+.paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  line-height: 1.2em; /* Extra space for emojis */
+}
+
 .footer {
   padding: 2em;
   color: white;

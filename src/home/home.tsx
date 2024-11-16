@@ -52,8 +52,16 @@ export const Home = () => {
                     </div>
                     <Sheet>
                         <Columns gap='12px' className={styles.bodyColumns} alignItems='center'>
-                            <Column flex={1}>
-                                It's Deinyon's website! Pronounced like <i>Cayenne</i> but starting with "dein." I'm also known as <i>ddoodm</i> across the intertubes.
+                            <Column flex={1} className={styles.paragraphs}>
+                                <span>
+                                    I'm Deinyon! It sounds like the words 'dining' and 'onion' mashed together - 'dinion' 😄; or ダイニョン if that means anything to you.
+                                </span>
+                                <span>
+                                    I'm currently a Frontend / Graphics Engineer at Canva, building our WebGL-based Photo Effects and graphics subsystems.
+                                </span>
+                                <span>
+                                    I've always loved making stuff with technology. Feel free to look around my socials and get in touch!
+                                </span>
                             </Column>
                             <Divider style={{
                                 alignSelf: 'stretch',
