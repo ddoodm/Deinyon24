@@ -8,6 +8,7 @@ import { Columns } from '../layout/columns/columns';
 import { Column } from '../layout/columns/column';
 import { Divider } from '../layout/columns/divider';
 import GitHubIcon from '../icons/github-mark.svg';
+import LinkedInIcon from '../icons/linkedin.svg';
 import YouTubeIcon from '../icons/youtube.svg';
 import InstagramIcon from '../icons/instagram.svg';
 import { Bubbles } from '../bubbles/bubbles';
@@ -62,6 +63,7 @@ export const Home = () => {
                             <Column flex={0.25}>
                                 <Rows>
                                     <SiteLink Icon={GitHubIcon} href='https://github.com/ddoodm/'>GitHub</SiteLink>
+                                    <SiteLink Icon={LinkedInIcon} href='https://linkedin.com/in/deinyon'>LinkedIn</SiteLink>
                                     <SiteLink Icon={YouTubeIcon} href='https://www.youtube.com/ddoodm'>YouTube</SiteLink>
                                     <SiteLink Icon={InstagramIcon} href='https://www.instagram.com/ddoodm/'>Instagram</SiteLink>
                                 </Rows>
