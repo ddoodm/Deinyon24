@@ -57,3 +57,13 @@
   width: auto;
   vertical-align: middle;
 }
+
+.footer {
+  padding: 2em;
+  color: white;
+  text-align: center;
+}
+
+.footer > a {
+  text-decoration: underline;
+}

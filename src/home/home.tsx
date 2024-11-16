@@ -24,12 +24,12 @@ const SiteLink: React.FC<React.PropsWithChildren<{ Icon: React.ComponentType<{ s
 
 const Footer = () => {
     return (
-        <div style={{
-            padding: '2em',
-            color: 'white',
-            textAlign: 'center',
-        }}>
+        <div className={styles.footer}>
             &copy; Deinyon Davies 2024<br />
+            Written in TS, React, CSS Modules, WebGL 2.0 - built with Webpack.<br />
+            <a href='https://github.com/ddoodm/Deinyon24' target='_blank'>
+                Source available on GitHub
+            </a><br />
             Hosted on GitHub Pages
         </div>
     );
