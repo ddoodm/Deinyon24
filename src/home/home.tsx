@@ -11,6 +11,7 @@ import GitHubIcon from '../icons/github-mark.svg';
 import YouTubeIcon from '../icons/youtube.svg';
 import InstagramIcon from '../icons/instagram.svg';
 import { Bubbles } from '../bubbles/bubbles';
+import { useLayout } from '../hooks/useLayout';
 
 const SiteLink: React.FC<React.PropsWithChildren<{ Icon: React.ComponentType<{ style?: React.CSSProperties }>, href: string }>> = ({ Icon, href, children }) => (
     <a href={href} target='_blank'>
@@ -35,10 +36,12 @@ const Footer = () => {
 };
 
 export const Home = () => {
+    const layout = useLayout();
+
     return (
         <div className={styles.body}>
             <BigHero>
-                <Rows spacing='50px' align='stretch'>
+                <Rows spacing={layout === 'horizontal' ? '50px' : '24px'} align='stretch'>
                     <ProfilePic />
                     <div className={styles.backgroundCanvas}>
                         <Bubbles />

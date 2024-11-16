@@ -1,3 +1,5 @@
+@import url('../global.css');
+
 .bigHero {
     min-height: 100vh;
     color: #FFF;
@@ -11,16 +13,19 @@
     /* position: relative; */
     box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 1.0);
   }
-  
-  @media screen and (max-width: 991px) {
-    .bigHero {
-      min-height: 100%;
-    }
-  }
 
 .container {
   padding-top: 7.5vh;
   padding-bottom: 7.5vh;
+}
+
+@media screen and (max-width: 768px) {
+  .bigHero {
+    min-height: 100%;
+  }
+  .container {
+    padding: 2em 0;
+  }
 }
 
 .bubbleBox {

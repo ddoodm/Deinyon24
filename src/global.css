@@ -8,6 +8,8 @@
 }
 
 :root {
+    --breakpoint-mobile: 768px;
+
     --grid-size: 60px;
     --grid-size-small: calc(var(--grid-size) * 0.2);
 
